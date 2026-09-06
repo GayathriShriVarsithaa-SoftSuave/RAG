@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Qdrant local data (if any gets created)
+qdrant_data/
+
+# Editor
+.vscode/
+
+# Eval output (regenerated each run)
+results.md

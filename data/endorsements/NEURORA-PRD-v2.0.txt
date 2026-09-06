@@ -1,0 +1,121 @@
+FORM_NUMBER: NEURORA-PRD v2.0
+POLICY_LINE: Behavioral Intelligence Platform
+EFFECTIVE_DATE: 2026-08-05
+TITLE: AI-Powered Behavioral Intelligence and Training Analysis Platform
+PROJECT_NAME: Neurora Behavioral Intelligence Platform
+PRODUCTS: Neurora Capture | Neurora Insight | Neurora Selfview
+DOCUMENT_VERSION: 2.0
+PRIMARY_USE_CASE: Driver Training and Safety-Related Training
+
+## Purpose
+
+Neurora is an AI-powered behavioral intelligence platform designed to understand and evaluate human attention, workload, stress, and performance during real-world training activities, with an initial focus on driver training and safety-related training.
+
+The platform combines multiple sources of synchronized data, including first-person video, eye-tracking/gaze data, physiological data, cognitive-load data, GPS, and optional audio or think-aloud narration. Instead of relying only on instructor observation and post-session recall, Neurora provides a single workflow for capturing, processing, analysing, and reviewing this multimodal data.
+
+The overall goal is to help trainers and analysts understand what a participant was looking at, what they may have missed, how their visual attention changed, and how physiological or cognitive-load changes relate to events during the training session. The resulting evidence can be converted into understandable coaching insights, recommendations, reports, and participant feedback.
+
+## Product Components Overview
+
+Neurora is made up of three products and a shared cloud backend, described individually in the sections below.
+
+## Neurora Capture
+
+Neurora Capture is the trainer-operated mobile application responsible for the acquisition layer. It manages projects, participants, sessions, device connections, calibration, recording, event tagging, local storage, local replay, and cloud upload.
+
+It integrates with supported devices such as Pupil Labs Neon, Tobii Pro Glasses 3, Tobii Pro Glasses X, Polar H10, and the Soma Reality cognitive-load service. During a session, the application can capture video, gaze, physiological data, cognitive-load data, GPS, optional audio, simulator events, and manual tags on a unified timeline.
+
+Capture also supports offline recording, encrypted local storage, reconnection handling, session recovery, local gaze-overlay replay, tagged-clip replay, and resumable multipart uploads.
+
+## Neurora Insight
+
+Neurora Insight is the central web-based experience for trainers, analysts, and supervisors. It provides session management, synchronized video playback, AOI detection and correction, metrics, visualisations, annotations, insights, comparisons, coaching recommendations, reports, and exports.
+
+The system allows trainers to review processed clips, correct automatically detected Areas of Interest, examine gaze and physiological information, compare participants or sessions, and generate evidence-based coaching recommendations.
+
+## Neurora Selfview
+
+Neurora Selfview is the participant-facing application. It provides participants with controlled access to authorised sessions and clips, simplified performance summaries, trainer feedback, and approved recommendations.
+
+It is intentionally not a raw-data analytics application. Participants only receive content that they are authorised to access, with the default experience being focused on selected clips and understandable feedback rather than unrestricted biometric or raw recording access.
+
+## Shared Cloud Backend
+
+The three products use a shared AWS-based backend responsible for identity, APIs, storage, event-driven processing, compute, model versioning, notifications, auditing, and administration.
+
+## End-to-End Workflow
+
+The typical Neurora workflow is:
+
+1. **Plan** — A trainer creates or selects a project, participant, and session and configures applicable study, protocol, scenario, devices, consent, GPS, and audio settings.
+2. **Connect and Validate** — Capture connects the required devices, checks battery, signal, storage, consent, and calibration.
+3. **Record** — Video, gaze, physiological, cognitive-load, GPS, audio, simulator events, and manual tags are captured using a unified timeline.
+4. **Immediate Review** — The trainer can replay the recording locally with synchronized gaze overlays and tagged clips without waiting for cloud processing.
+5. **Upload and Process** — Session data is securely uploaded using resumable multipart transfers and processed through cloud pipelines.
+6. **Analyse** — Insight displays synchronized video, AOIs, metrics, physiological/cognitive timelines, optional transcripts, and generated insights.
+7. **Coach and Compare** — Trainers can correct AOIs, annotate clips, compare participants or sessions, create recommendations, and generate reports.
+8. **Participant Feedback** — Selfview provides authorised clips, simplified summaries, trainer feedback, and controlled sharing to the participant.
+
+## Data and Analysis
+
+Neurora analyses eye-tracking, physiological, cognitive-load, and contextual information. Important metrics include fixation duration and count, fixation rate, time to first fixation, AOI dwell time, gaze entropy, road-centre gaze ratio, PERCLOS, blink rate, pupil dilation, saccadic velocity, Total Eyes-Off-Road Time, heart rate, HRV, stress estimates, cognitive load, scan paths, heatmaps, and event-based measures.
+
+The platform uses these measurements to generate insight categories such as:
+
+* Hazard perception
+* Visual strategy
+* Distraction / eyes-off-road
+* Cognitive tunnelling
+* Fatigue indication
+* Stress and workload
+* Compliance and manoeuvre behaviour
+* Participant progression
+* Participant-to-participant comparison
+* Expert-versus-novice comparison
+* Voice-context correlation
+* Study and condition comparison
+
+## AI and Computer Vision
+
+AI and computer vision are used for Area of Interest detection, object tracking, gaze mapping, metric generation, and behavioural insights. Automated results are designed to remain explainable and reviewable by authorised trainers or analysts.
+
+Every insight should be traceable back to the underlying metrics, timestamps, AOIs, data-quality information, and model or rule versions. AI outputs are intended as decision support for trainers rather than guaranteed statements about a person's intent, cognition, safety, or medical condition.
+
+The platform also supports optional voice/think-aloud processing. Spoken content can be transcribed with word- or sentence-level timestamps and correlated with gaze, AOIs, physiology, cognitive load, and task events.
+
+## Security and Privacy
+
+Because Neurora handles sensitive behavioural, physiological, eye-tracking, video, audio, and potentially location data, the platform includes strong security and privacy requirements.
+
+The system requires encryption in transit and at rest, secure key management, MFA, role-based access control, tenant isolation, signed media access, audit logging, and controlled access to raw biometric data.
+
+The platform also generates privacy-protected media derivatives by detecting and anonymising visible faces and vehicle registration plates. Original recordings are stored separately and are only accessible to authorised roles. Sharing and exporting can be blocked when required anonymisation processing has failed or has not received the required approval.
+
+## Exclusions Table
+
+| Code | Description                                                           | Applies To (Excluded?)       |
+| ---- | --------------------------------------------------------------------- | ---------------------------- |
+| E-01 | Vehicle CAN-bus or ECU data ingestion and vehicle-control integration | Yes - excluded               |
+| E-02 | Real-time safety intervention or collision avoidance                  | Yes - excluded               |
+| E-03 | Autonomous driving or vehicle control                                 | Yes - excluded               |
+| E-04 | Medical or clinical diagnosis                                         | Yes - excluded               |
+| E-05 | Large-scale custom AI model training unless separately commissioned   | Yes - excluded               |
+| E-06 | Unrestricted participant/public access to raw biometric data          | Yes - excluded               |
+| E-07 | Lane detection/tracking in the current product release                | Yes - currently disabled     |
+| E-08 | Eye tracking, video, physiological and cognitive-load analysis        | No - core functionality      |
+| E-09 | Trainer review, AOI correction and coaching recommendations           | No - core functionality      |
+| E-10 | Participant feedback through Neurora Selfview                         | No - supported functionality |
+
+The PRD specifically states that CAN-bus/ECU integration, real-time safety intervention, medical diagnosis, unrestricted raw biometric access, and current-release lane detection are outside the active scope.
+
+## Claims Note
+
+Neurora is designed to transform raw multimodal training-session data into evidence-based behavioural insights and coaching feedback.
+
+A key principle of the platform is that insights should remain explainable: trainers should be able to trace a finding back to the underlying session, clip, timestamp, AOI, metric, and processing version. Automated analysis can be reviewed and corrected by authorised users rather than being treated as unquestionable output.
+
+In simple terms, the project follows this chain:
+
+Capture → Synchronize → Store → Upload → AI/CV Processing → Metrics → Insights → Trainer Review → Coaching → Participant Feedback
+
+The final objective is to replace fragmented, largely subjective training assessment with a synchronized, data-driven workflow that helps trainers understand participant behaviour and provide more targeted feedback.
