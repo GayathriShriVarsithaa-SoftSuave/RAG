@@ -1,0 +1,164 @@
+{
+  "hit_rate_at_3": 0.9166666666666666,
+  "hits": 11,
+  "total": 12,
+  "p50_latency_ms": 502.17,
+  "results": [
+    {
+      "id": 1,
+      "question": "Does this platform ingest raw vehicle CAN-bus or ECU data as part of its normal operation?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:14",
+      "hard_token": true,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:14",
+        "NEURORA-PRD-v2.0.txt:naive:16",
+        "NEURORA-PRD-v2.0.txt:naive:13"
+      ],
+      "latency_ms": 28155.19
+    },
+    {
+      "id": 2,
+      "question": "Can the system step in to intervene and help a driver avoid a collision while it's happening?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:14",
+      "hard_token": true,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:14",
+        "NEURORA-PRD-v2.0.txt:naive:1",
+        "NEURORA-PRD-v2.0.txt:naive:16"
+      ],
+      "latency_ms": 1029.19
+    },
+    {
+      "id": 3,
+      "question": "Is the platform able to drive the vehicle itself or take over vehicle control?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:14",
+      "hard_token": true,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:15",
+        "NEURORA-PRD-v2.0.txt:naive:13",
+        "NEURORA-PRD-v2.0.txt:naive:14"
+      ],
+      "latency_ms": 654.47
+    },
+    {
+      "id": 4,
+      "question": "Would a participant be able to get unrestricted, unsupervised access to someone else's raw biometric recordings?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:15",
+      "hard_token": true,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:6",
+        "NEURORA-PRD-v2.0.txt:naive:15",
+        "NEURORA-PRD-v2.0.txt:naive:16"
+      ],
+      "latency_ms": 497.11
+    },
+    {
+      "id": 5,
+      "question": "Is lane detection or tracking a feature that is actively working right now in the shipped product?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:15",
+      "hard_token": true,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:17",
+        "NEURORA-PRD-v2.0.txt:naive:16",
+        "NEURORA-PRD-v2.0.txt:naive:15"
+      ],
+      "latency_ms": 507.22
+    },
+    {
+      "id": 6,
+      "question": "What devices does Neurora Capture integrate with to record eye-tracking and physiological data during a session?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:3",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:3",
+        "NEURORA-PRD-v2.0.txt:naive:1",
+        "NEURORA-PRD-v2.0.txt:naive:7"
+      ],
+      "latency_ms": 405.6
+    },
+    {
+      "id": 7,
+      "question": "What can trainers and analysts do inside Neurora Insight with a recorded session?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:5",
+      "hard_token": false,
+      "hit_at_3": false,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:4",
+        "NEURORA-PRD-v2.0.txt:naive:2",
+        "NEURORA-PRD-v2.0.txt:naive:17"
+      ],
+      "latency_ms": 543.42
+    },
+    {
+      "id": 8,
+      "question": "What kind of access does a participant get through Neurora Selfview, and is it a full raw-data analytics view?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:6",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:5",
+        "NEURORA-PRD-v2.0.txt:naive:6",
+        "NEURORA-PRD-v2.0.txt:naive:16"
+      ],
+      "latency_ms": 418.52
+    },
+    {
+      "id": 9,
+      "question": "In the end-to-end Neurora workflow, what does a trainer do first, before any device is connected?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:7",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:7",
+        "NEURORA-PRD-v2.0.txt:naive:6",
+        "NEURORA-PRD-v2.0.txt:naive:1"
+      ],
+      "latency_ms": 396.4
+    },
+    {
+      "id": 10,
+      "question": "Which metric does Neurora use to measure how much time a driver's eyes spend off the road during a session?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:10",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:9",
+        "NEURORA-PRD-v2.0.txt:naive:10",
+        "NEURORA-PRD-v2.0.txt:naive:1"
+      ],
+      "latency_ms": 597.66
+    },
+    {
+      "id": 11,
+      "question": "What access controls and security measures does the platform require for handling biometric data?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:12",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:13",
+        "NEURORA-PRD-v2.0.txt:naive:15",
+        "NEURORA-PRD-v2.0.txt:naive:12"
+      ],
+      "latency_ms": 421.41
+    },
+    {
+      "id": 12,
+      "question": "According to the Claims Note, what should a trainer be able to trace an automated finding back to?",
+      "expected_chunk_id": "NEURORA-PRD-v2.0.txt:naive:17",
+      "hard_token": false,
+      "hit_at_3": true,
+      "retrieved_top3": [
+        "NEURORA-PRD-v2.0.txt:naive:17",
+        "NEURORA-PRD-v2.0.txt:naive:11",
+        "NEURORA-PRD-v2.0.txt:naive:16"
+      ],
+      "latency_ms": 446.12
+    }
+  ]
+}
