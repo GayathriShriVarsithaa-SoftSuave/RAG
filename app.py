@@ -6,13 +6,14 @@ Endpoints:
   GET  /query/unfiltered   -> vector search only, no metadata filter
   GET  /query/filtered     -> vector search restricted to one policy_line
   POST /generate           -> retrieval + Gemini answer, with citations or a forced refusal
+                               (also logs one trace per call to traces.jsonl -- see tracing.py)
 """
 
 from fastapi import FastAPI, Query
 from pydantic import BaseModel
 
 from search import search_unfiltered, search_filtered
-from generate import answer_question
+from tracing import run_traced_query
 
 app = FastAPI(title="Endorsement Claims Assistant - Week 3 Task D")
 
@@ -42,13 +43,11 @@ def query_filtered(
 
 class GenerateRequest(BaseModel):
     question: str
-    strategy: str = "structured"
+    strategy: str = "naive"
     top_k: int = 5
 
 
 @app.post("/generate")
 def generate(req: GenerateRequest):
-    """Retrieves context, then asks Gemini to answer with citations or refuse."""
-    retrieved = search_unfiltered(req.question, strategy=req.strategy, top_k=req.top_k)
-    result = answer_question(req.question, retrieved)
-    return {"question": req.question, "retrieved_chunk_ids": [r["chunk_id"] for r in retrieved], **result}
+    """Retrieves context, asks Gemini to answer with citations or refuse, and logs a trace."""
+    return run_traced_query(req.question, strategy=req.strategy, top_k=req.top_k)
