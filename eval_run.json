@@ -1,0 +1,429 @@
+[
+  {
+    "id": 1,
+    "mode": "M2",
+    "regression": true,
+    "question": "Does this platform ingest raw vehicle CAN-bus or ECU data as part of its normal operation?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state in the Exclusions Table (E-01) that vehicle CAN-bus or ECU data ingestion is excluded, meaning it is not part of normal operation.",
+    "passed": false
+  },
+  {
+    "id": 2,
+    "mode": "M2",
+    "regression": true,
+    "question": "Can the system step in to intervene and help a driver avoid a collision while it's happening?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state in the Exclusions Table that \"Real-time safety intervention or collision avoidance\" is excluded (E-02), so the information is present.",
+    "passed": false
+  },
+  {
+    "id": 3,
+    "mode": "M4",
+    "regression": true,
+    "question": "Is the platform able to drive the vehicle itself or take over vehicle control?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state in the Exclusions Table that \"Autonomous driving or vehicle control\" is excluded (E-03).",
+    "passed": false
+  },
+  {
+    "id": 4,
+    "mode": "M1",
+    "regression": false,
+    "question": "Would a participant be able to get unrestricted, unsupervised access to someone else's raw biometric recordings?",
+    "expect": "answer",
+    "answer": "No, participants do not have unrestricted access to raw biometric data. The system is designed to provide controlled access to authorised sessions, clips, and feedback [chunk_id: NEURORA-PRD-v2.0.txt:naive:5, clause: None]. Unrestricted participant/public access to raw biometric data is explicitly listed as excluded from the product [chunk_id: NEURORA-PRD-v2.0.txt:naive:15, clause: None]. Furthermore, the platform requires controlled access to raw biometric data [chunk_id: NEURORA-PRD-v2.0.txt:naive:13, clause: None], and participants only receive content they are authorised to access, with the default experience focused on selected clips rather than unrestricted biometric access [chunk_id: NEURORA-PRD-v2.0.txt:naive:6, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true,
+      "denial_cites_exclusion_code": false
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the provided excerpts regarding participant access limitations and the exclusion of unrestricted raw biometric data access.",
+    "passed": false
+  },
+  {
+    "id": 5,
+    "mode": "M4",
+    "regression": true,
+    "question": "Is lane detection or tracking a feature that is actively working right now in the shipped product?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state that lane detection/tracking is currently disabled (E-07).",
+    "passed": false
+  },
+  {
+    "id": 6,
+    "mode": "M1",
+    "regression": false,
+    "question": "What devices does Neurora Capture integrate with to record eye-tracking and physiological data during a session?",
+    "expect": "answer",
+    "answer": "Neurora Capture integrates with Pupil Labs Neon, Tobii Pro Glasses 3, Tobii Pro Glasses X, Polar H10, and the Soma Reality cognitive-load service [chunk_id: NEURORA-PRD-v2.0.txt:naive:3, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately lists the devices mentioned in the provided excerpts.",
+    "passed": true
+  },
+  {
+    "id": 7,
+    "mode": "M1",
+    "regression": false,
+    "question": "What can trainers and analysts do inside Neurora Insight with a recorded session?",
+    "expect": "answer",
+    "answer": "Inside Neurora Insight, trainers and analysts can perform session management, synchronized video playback, AOI detection and correction, and access metrics, visualisations, annotations, insights, comparisons, coaching recommendations, reports, and exports [chunk_id: NEURORA-PRD-v2.0.txt:naive:4, clause: None]. Additionally, they can review processed clips, correct automatically detected Areas of Interest, examine gaze and physiological information, compare participants or sessions, and generate evidence-based coaching recommendations [chunk_id: NEURORA-PRD-v2.0.txt:naive:5, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the capabilities of Neurora Insight as described in the provided excerpts.",
+    "passed": true
+  },
+  {
+    "id": 8,
+    "mode": "M1",
+    "regression": false,
+    "question": "What kind of access does a participant get through Neurora Selfview, and is it a full raw-data analytics view?",
+    "expect": "answer",
+    "answer": "Neurora Selfview provides participants with controlled access to authorised sessions and clips, simplified performance summaries, trainer feedback, and approved recommendations [chunk_id: NEURORA-PRD-v2.0.txt:naive:5, clause: None]. It is intentionally not a raw-data analytics application; participants receive a focused experience consisting of selected clips and understandable feedback rather than unrestricted access to raw recordings or biometric data [chunk_id: NEURORA-PRD-v2.0.txt:naive:6, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the information provided in the excerpts regarding participant access and the nature of the application.",
+    "passed": true
+  },
+  {
+    "id": 9,
+    "mode": "M1",
+    "regression": false,
+    "question": "In the end-to-end Neurora workflow, what does a trainer do first, before any device is connected?",
+    "expect": "answer",
+    "answer": "In the end-to-end Neurora workflow, the trainer first creates or selects a project, participant, and session and configures applicable study, protocol, scenario, devices, consent, GPS, and audio settings [chunk_id: NEURORA-PRD-v2.0.txt:naive:7, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the \"Plan\" step described in the provided workflow excerpt.",
+    "passed": true
+  },
+  {
+    "id": 10,
+    "mode": "M1",
+    "regression": false,
+    "question": "Which metric does Neurora use to measure how much time a driver's eyes spend off the road during a session?",
+    "expect": "answer",
+    "answer": "Neurora measures the time a driver's eyes spend off the road using the metric \"Total Eyes-Off-Road Time\" [chunk_id: NEURORA-PRD-v2.0.txt:naive:9, clause: None] [chunk_id: NEURORA-PRD-v2.0.txt:naive:10, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The excerpts explicitly list \"Total Eyes-Off-Road Time\" as a metric used by the platform.",
+    "passed": true
+  },
+  {
+    "id": 11,
+    "mode": "M1",
+    "regression": false,
+    "question": "What access controls and security measures does the platform require for handling biometric data?",
+    "expect": "answer",
+    "answer": "The platform requires encryption in transit and at rest, secure key management, MFA, role-based access control, tenant isolation, signed media access, audit logging, and controlled access to raw biometric data [chunk_id: NEURORA-PRD-v2.0.txt:naive:13, clause: None]. Additionally, the platform is not a raw-data analytics application, and the default experience focuses on selected clips and feedback rather than unrestricted access to raw recordings or biometric data [chunk_id: NEURORA-PRD-v2.0.txt:naive:6, clause: None]. Original recordings are stored separately and are only accessible to authorised roles [chunk_id: NEURORA-PRD-v2.0.txt:naive:13, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the security measures and access controls described in the provided excerpts.",
+    "passed": true
+  },
+  {
+    "id": 12,
+    "mode": "M1",
+    "regression": false,
+    "question": "According to the Claims Note, what should a trainer be able to trace an automated finding back to?",
+    "expect": "answer",
+    "answer": "A trainer should be able to trace a finding back to the underlying session, clip, timestamp, AOI, metric, and processing version [chunk_id: NEURORA-PRD-v2.0.txt:naive:17, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately reflects the information provided in the Claims Note excerpt.",
+    "passed": true
+  },
+  {
+    "id": 13,
+    "mode": "M3",
+    "regression": false,
+    "question": "What is the refund policy if a customer cancels their Neurora subscription?",
+    "expect": "refuse",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly identifies that the provided excerpts do not contain information regarding a refund policy.",
+    "passed": true
+  },
+  {
+    "id": 14,
+    "mode": "M3",
+    "regression": false,
+    "question": "Does Neurora offer a mobile app for iOS and Android?",
+    "expect": "refuse",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly refuses to provide information not found in the provided excerpts.",
+    "passed": true
+  },
+  {
+    "id": 15,
+    "mode": "M3",
+    "regression": false,
+    "question": "What is the pricing for the enterprise tier of the Neurora platform?",
+    "expect": "refuse",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly refuses to provide information not found in the excerpts.",
+    "passed": true
+  },
+  {
+    "id": 16,
+    "mode": "M3",
+    "regression": false,
+    "question": "Who is the CEO of the company that makes Neurora?",
+    "expect": "refuse",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly uses the refusal format because the provided excerpts do not contain information about the company's CEO.",
+    "passed": true
+  },
+  {
+    "id": 17,
+    "mode": "M3",
+    "regression": false,
+    "question": "Does the platform support languages other than English?",
+    "expect": "refuse",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The assistant correctly refused to answer because the provided excerpts do not contain information regarding supported languages.",
+    "passed": true
+  },
+  {
+    "id": 18,
+    "mode": "M6",
+    "regression": false,
+    "question": "Does the platform support both autonomous driving and medical diagnosis features?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state that both autonomous driving and medical diagnosis are excluded from the platform.",
+    "passed": false
+  },
+  {
+    "id": 19,
+    "mode": "M6",
+    "regression": false,
+    "question": "Is the biometric data encrypted, and who exactly is allowed to see it unencrypted?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer is a refusal, which is explicitly permitted by the instructions.",
+    "passed": false
+  },
+  {
+    "id": 20,
+    "mode": "M6",
+    "regression": false,
+    "question": "Can a participant both correct their own AOI tags and see other participants' sessions?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly refuses to answer the question based on the provided excerpts.",
+    "passed": false
+  },
+  {
+    "id": 21,
+    "mode": "M2",
+    "regression": true,
+    "question": "wat divices does neurora capture intergrate with for eye tracking",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly list \"Tobii Pro Glasses 3\" and \"Tobii Pro Glasses X\" as supported devices for eye tracking.",
+    "passed": false
+  },
+  {
+    "id": 22,
+    "mode": "M5",
+    "regression": false,
+    "question": "is lane detction curently enabled in teh product",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state that lane detection is currently disabled (E-07).",
+    "passed": false
+  },
+  {
+    "id": 23,
+    "mode": "M5",
+    "regression": false,
+    "question": "can this thing drive the car by itself lol",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly refuses to answer the question based on the provided excerpts.",
+    "passed": false
+  },
+  {
+    "id": 24,
+    "mode": "M1",
+    "regression": false,
+    "question": "What form number and version does this PRD document carry?",
+    "expect": "answer",
+    "answer": "The PRD document carries the form number NEURORA-PRD v2.0 [chunk_id: NEURORA-PRD-v2.0.txt:naive:0, clause: None]. The document version is 2.0 [chunk_id: NEURORA-PRD-v2.0.txt:naive:0, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer accurately identifies the form number and document version as stated in the provided excerpt.",
+    "passed": true
+  },
+  {
+    "id": 25,
+    "mode": "M1",
+    "regression": false,
+    "question": "How many exclusion codes are listed in the Exclusions Table?",
+    "expect": "answer",
+    "answer": "There are eight exclusion codes listed in the Exclusions Table (E-01 through E-08) [chunk_id: NEURORA-PRD-v2.0.txt:naive:14, clause: None], [chunk_id: NEURORA-PRD-v2.0.txt:naive:15, clause: None].",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": true,
+      "has_citation": true,
+      "cites_retrieved_chunk": true,
+      "denial_cites_exclusion_code": true
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts list codes E-01 through E-08, but they do not state that these are the only codes or that there are exactly eight in total.",
+    "passed": false
+  },
+  {
+    "id": 26,
+    "mode": "M2",
+    "regression": true,
+    "question": "Is real-time collision intervention something this platform actually does?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "FAIL",
+    "judge_reason": "The excerpts explicitly state in the Exclusions Table that real-time collision avoidance is excluded (E-02), so the assistant should have answered the question rather than refusing.",
+    "passed": false
+  },
+  {
+    "id": 27,
+    "mode": "M4",
+    "regression": false,
+    "question": "If two participants are in the same session, can one see the other's raw biometric feed without permission?",
+    "expect": "answer",
+    "answer": "REFUSE: The indexed endorsements do not contain this information.",
+    "error": null,
+    "assertions": {
+      "refusal_matches_expectation": false
+    },
+    "judge_verdict": "PASS",
+    "judge_reason": "The answer correctly refuses to answer the question because the provided excerpts do not contain information regarding participant-to-participant access permissions.",
+    "passed": false
+  }
+]

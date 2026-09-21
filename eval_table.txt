@@ -1,0 +1,35 @@
+[qdrant_config] Using Qdrant Cloud at https://0ffed8ca-3373-44cc-948b-53d1dda4ba82.australia-southeast1-0.gcp.cloud.qdrant.io/
+
+====================================================================================
+MODE  WHAT                                   CASES  PASSED  PASS RATE
+------------------------------------------------------------------------------------
+M1    generation backend unavailable (403)      10       8      80.0%
+M2    refusal threshold wrongly refuses          4       0       0.0%
+M3    correct refusal (not in corpus)            5       5     100.0%
+M4    reranker ranks wrong chunk first           3       0       0.0%
+M5    typo / informal phrasing                   2       0       0.0%
+M6    compound question                          3       0       0.0%
+------------------------------------------------------------------------------------
+ALL   (one number hides the modes above)        27      13      48.1%
+====================================================================================
+regression cases (replayed verbatim from real failed traces): 0/6 pass
+assertions: 4  |  judged criteria: 1   (refusal_matches_expectation, has_citation, cites_retrieved_chunk, denial_cites_exclusion_code | faithful_to_excerpts)
+judge prompt: judge_v2.txt
+
+Failures:
+  case  1 [M2] refusal_matches_expectation, judge=FAIL
+  case  2 [M2] refusal_matches_expectation, judge=FAIL
+  case  3 [M4] refusal_matches_expectation, judge=FAIL
+  case  4 [M1] denial_cites_exclusion_code
+  case  5 [M4] refusal_matches_expectation, judge=FAIL
+  case 18 [M6] refusal_matches_expectation, judge=FAIL
+  case 19 [M6] refusal_matches_expectation
+  case 20 [M6] refusal_matches_expectation
+  case 21 [M2] refusal_matches_expectation, judge=FAIL
+  case 22 [M5] refusal_matches_expectation, judge=FAIL
+  case 23 [M5] refusal_matches_expectation
+  case 25 [M1] judge=FAIL
+  case 26 [M2] refusal_matches_expectation, judge=FAIL
+  case 27 [M4] refusal_matches_expectation
+
+Full detail saved to eval_run.json
