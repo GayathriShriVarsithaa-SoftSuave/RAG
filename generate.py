@@ -33,11 +33,17 @@ endorsement excerpts. Rules:
 """
 
 
+_CLIENT = None  # kept alive on purpose: newer google-genai closes a Client that is thrown away
+
+
 def _client() -> genai.Client:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("Set GEMINI_API_KEY in your .env file (see .env.example)")
-    return genai.Client(api_key=api_key)
+    global _CLIENT
+    if _CLIENT is None:
+        _CLIENT = genai.Client(api_key=api_key)
+    return _CLIENT
 
 
 def build_context(retrieved: list[dict]) -> str:
