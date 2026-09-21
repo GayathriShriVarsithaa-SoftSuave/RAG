@@ -70,3 +70,32 @@ def run_tool(name, args):
         return func(**args)
     except TypeError as exc:
         return {"error": f"bad arguments for {name}: {exc}"}
+
+
+# ================================================================ THIRD TOOL (added in Week 7)
+def compute_payout(loss_amount, excess, claim_status):
+    if claim_status not in ("COVERED", "EXCLUDED"):
+        return {"error": "claim_status must be COVERED or EXCLUDED"}
+    if claim_status == "EXCLUDED":
+        return {"payable_amount": 0.0}
+    return {"payable_amount": round(max(0.0, float(loss_amount) - float(excess)), 2)}
+
+
+TOOL_FUNCS["compute_payout"] = compute_payout
+
+TOOL_SPECS.append({
+    "name": "compute_payout",
+    "description": ("Calculate the amount to pay on ONE claim: a COVERED claim pays loss_amount minus "
+                    "excess (never below zero), an EXCLUDED claim pays 0. Pure arithmetic: it never "
+                    "reads claims and never searches the policy."),
+    "parameters": {
+        "type": "OBJECT",
+        "properties": {
+            "loss_amount": {"type": "NUMBER", "description": "Total loss claimed, from the claim record"},
+            "excess": {"type": "NUMBER", "description": "Excess (deductible) from the claim record"},
+            "claim_status": {"type": "STRING", "enum": ["COVERED", "EXCLUDED"],
+                             "description": "COVERED if no exclusion applies, EXCLUDED if one does"},
+        },
+        "required": ["loss_amount", "excess", "claim_status"],
+    },
+})
