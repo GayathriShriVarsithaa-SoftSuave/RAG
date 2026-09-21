@@ -1,0 +1,217 @@
+{
+  "prompt_file": "judge_v2.txt",
+  "labels_commit": "a7a295fd38f7a3c19054284e572e7d8d1d9ea7fe",
+  "labels_committed_at": "2026-09-21T06:40:39+05:30",
+  "judge_run_at": "2026-09-21T01:33:47.077904+00:00",
+  "agreement_pct": 92.0,
+  "matches": 23,
+  "total": 25,
+  "agreement_pct_non_refusal_only": 90.5,
+  "few_shot_example_ids": [
+    19,
+    25
+  ],
+  "agreement_pct_excluding_examples": 91.3,
+  "items": [
+    {
+      "id": 1,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the excerpts regarding the exclusion of CAN-bus/ECU data ingestion.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 2,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the exclusion of real-time safety intervention and collision avoidance as stated in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 3,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the exclusions listed in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 4,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer is fully supported by the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 5,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The excerpts confirm that lane detection is currently disabled and outside the active scope of the current product release.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 6,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately lists the devices mentioned in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 7,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the capabilities of Neurora Insight as described in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 8,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the excerpts regarding participant access and the nature of the application.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 9,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the \"Plan\" step of the workflow described in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 10,
+      "human": "FAIL",
+      "judge": "PASS",
+      "reason": "The excerpts explicitly list \"Total Eyes-Off-Road Time\" as a metric used by the platform.",
+      "agree": false,
+      "is_refusal": false
+    },
+    {
+      "id": 11,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the security and access control measures described in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 12,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the Claims Note excerpt.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 14,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer correctly refuses to provide information not found in the provided excerpts.",
+      "agree": true,
+      "is_refusal": true
+    },
+    {
+      "id": 15,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer correctly refuses to provide information not found in the excerpts.",
+      "agree": true,
+      "is_refusal": true
+    },
+    {
+      "id": 16,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer correctly uses the refusal format because the provided excerpts do not contain information about the company's CEO.",
+      "agree": true,
+      "is_refusal": true
+    },
+    {
+      "id": 18,
+      "human": "FAIL",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the excerpts regarding the exclusion of autonomous driving and medical diagnosis.",
+      "agree": false,
+      "is_refusal": false
+    },
+    {
+      "id": 19,
+      "human": "FAIL",
+      "judge": "FAIL",
+      "reason": "The excerpts do not state that original recordings contain raw biometric data.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 20,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer correctly refuses to answer the question based on the provided excerpts.",
+      "agree": true,
+      "is_refusal": true
+    },
+    {
+      "id": 21,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately lists the eye-tracking devices mentioned in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 22,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the excerpt regarding the status of lane detection.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 23,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects that autonomous driving and vehicle control are listed as excluded in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 24,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer correctly identifies the form number and version as stated in the provided excerpts.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 25,
+      "human": "FAIL",
+      "judge": "FAIL",
+      "reason": "The excerpts show codes E-01 through E-08, but they do not state that these are the only codes or that there are exactly eight in total.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 26,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the information provided in the excerpts regarding the exclusion of real-time safety intervention.",
+      "agree": true,
+      "is_refusal": false
+    },
+    {
+      "id": 27,
+      "human": "PASS",
+      "judge": "PASS",
+      "reason": "The answer accurately reflects the provided excerpts regarding access controls and the exclusion of unrestricted access to raw biometric data.",
+      "agree": true,
+      "is_refusal": false
+    }
+  ]
+}

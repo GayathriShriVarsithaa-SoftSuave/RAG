@@ -1,0 +1,1 @@
+Adding cases 19 and 25 as examples will teach the judge to FAIL answers that state something the excerpts only imply (like "8 is the total" or "recordings contain raw data"), so I expect it to fix cases 10, 19 and 25 but not case 18 (where the excerpts do mention exclusion and scope), and I expect the stricter judge to wrongly start failing one or two of my PASS cases.
