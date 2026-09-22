@@ -1,0 +1,7 @@
+AGENT start: CLM-2026-00004  budgets: iters=2 tokens=20000 cost=$0.05 seconds=90
+lap 1: tool calls -> get_claim({'claim_id': 'CLM-2026-00004'}) | tokens so far 666 | $0.0002 | 6.1s
+lap 2: tool calls -> search_policy({'query': 'flood'}) | tokens so far 1453 | $0.0004 | 16.8s
+BUDGET HIT: max_iters (limit 2, used 2). Stopping cleanly, no answer produced.
+
+RESULT: null
+stopped by: max_iters | laps: 2 | tokens: 1453 | cost: $0.0004 | 16.8s
