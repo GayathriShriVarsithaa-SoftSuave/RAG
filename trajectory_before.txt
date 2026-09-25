@@ -1,0 +1,30 @@
+CLM-2026-00001 clean               outcome=PASS trajectory=FAIL seq=('get_claim', 'search_policy', 'search_policy', 'compute_payout') steps=4/3 cost=$0.0012
+CLM-2026-00002 clean               outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+CLM-2026-00003 clean               outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+CLM-2026-00004 exclusion-in-notes  outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+CLM-2026-00005 exclusion-in-notes  outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+CLM-2026-00006 exclusion-in-notes  outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+CLM-2026-00007 missing-or-unclear  outcome=PASS trajectory=PASS seq=('get_claim',) steps=1/1 cost=$0.0005
+CLM-2026-00008 missing-or-unclear  outcome=PASS trajectory=PASS seq=('get_claim',) steps=1/1 cost=$0.0005
+CLM-2026-00009 missing-or-unclear  outcome=PASS trajectory=PASS seq=('get_claim',) steps=1/1 cost=$0.0004
+CLM-2026-00010 exclusion-in-notes  outcome=PASS trajectory=PASS seq=('get_claim', 'search_policy', 'compute_payout') steps=3/3 cost=$0.0010
+
+==============================================================================
+RESULTS
+------------------------------------------------------------------------------
+outcome pass rate        : 100.0%  (10/10)
+trajectory pass rate     : 90.0%  (9/10)
+GAP (outcome - trajectory): 10.0 points
+tool-choice accuracy     : 90.0%
+argument validity rate   : 100.0%  (35/35 checks)
+step efficiency (mean)   : 1.03  (1.00 = no wasted steps)
+cost per claim           : p50 $0.0010  |  max $0.0012
+==============================================================================
+
+Right-answer-wrong-path cases (outcome PASS, trajectory FAIL):
+
+  CLM-2026-00001 (clean)
+    actual path  : ['get_claim', 'search_policy', 'search_policy', 'compute_payout']
+    expected path(s): [['get_claim', 'search_policy', 'compute_payout']]
+
+Saved trajectory_run.json
