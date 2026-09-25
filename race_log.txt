@@ -1,0 +1,34 @@
+agent     CLM-2026-00001 clean               PASS  calls=5 tokens=4069  stopped_by=final_answer
+workflow  CLM-2026-00001 clean               PASS  calls=2 tokens=331  stopped_by=done
+agent     CLM-2026-00002 clean               PASS  calls=4 tokens=3192  stopped_by=final_answer
+workflow  CLM-2026-00002 clean               PASS  calls=2 tokens=333  stopped_by=done
+agent     CLM-2026-00003 clean               PASS  calls=4 tokens=3195  stopped_by=final_answer
+workflow  CLM-2026-00003 clean               PASS  calls=2 tokens=331  stopped_by=done
+agent     CLM-2026-00004 exclusion-in-notes  PASS  calls=4 tokens=3266  stopped_by=final_answer
+workflow  CLM-2026-00004 exclusion-in-notes  PASS  calls=2 tokens=376  stopped_by=done
+agent     CLM-2026-00005 exclusion-in-notes  PASS  calls=4 tokens=3285  stopped_by=final_answer
+workflow  CLM-2026-00005 exclusion-in-notes  PASS  calls=2 tokens=388  stopped_by=done
+agent     CLM-2026-00006 exclusion-in-notes  PASS  calls=4 tokens=3268  stopped_by=final_answer
+workflow  CLM-2026-00006 exclusion-in-notes  PASS  calls=2 tokens=377  stopped_by=done
+agent     CLM-2026-00007 missing-or-unclear  PASS  calls=2 tokens=1470  stopped_by=final_answer
+workflow  CLM-2026-00007 missing-or-unclear  PASS  calls=1 tokens=113  stopped_by=done
+agent     CLM-2026-00008 missing-or-unclear  PASS  calls=2 tokens=1448  stopped_by=final_answer
+workflow  CLM-2026-00008 missing-or-unclear  PASS  calls=0 tokens=0  stopped_by=done
+agent     CLM-2026-00009 missing-or-unclear  PASS  calls=2 tokens=1406  stopped_by=final_answer
+workflow  CLM-2026-00009 missing-or-unclear  PASS  calls=0 tokens=0  stopped_by=done
+agent     CLM-2026-00010 exclusion-in-notes  PASS  calls=4 tokens=3254  stopped_by=final_answer
+workflow  CLM-2026-00010 exclusion-in-notes  PASS  calls=2 tokens=369  stopped_by=done
+
+==============================================================================
+system      pass rate   p50 latency   total tokens   cost / claim
+------------------------------------------------------------------------------
+agent          100.0%        12.83s          27853      $0.000836
+workflow       100.0%          6.0s           2618      $0.000100
+==============================================================================
+
+Pass count by claim class (this is what the verdict is about):
+  clean                agent: 3/3  workflow: 3/3
+  exclusion-in-notes   agent: 4/4  workflow: 4/4
+  missing-or-unclear   agent: 3/3  workflow: 3/3
+
+Saved race.csv and race_detail.csv
