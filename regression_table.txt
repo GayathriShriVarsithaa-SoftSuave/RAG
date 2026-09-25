@@ -1,0 +1,25 @@
+
+BEFORE
+  outcome pass rate    : 100.0%
+  trajectory pass rate : 90.0%
+  tool-choice accuracy : 90.0%
+  redundant-call mode  : 1/10  claims: ['CLM-2026-00001']
+  mean step efficiency : 1.03
+  cost per claim       : p50 $0.0010  max $0.0012  mean $0.00084
+
+AFTER
+  outcome pass rate    : 100.0%
+  trajectory pass rate : 100.0%
+  tool-choice accuracy : 100.0%
+  redundant-call mode  : 0/10  claims: []
+  mean step efficiency : 1.00
+  cost per claim       : p50 $0.0010  max $0.0010  mean $0.00085
+
+Top failure mode (redundant tool call) count: 1/10 -> 0/10
+Price paid (mean cost per claim): $0.00084 -> $0.00085  (delta $+0.00002)
+
+Per-mode (claim-kind) regression table: trajectory pass count, before -> after
+  clean               2/3  ->  3/3
+  exclusion-in-notes  4/4  ->  4/4
+  missing-or-unclear  3/3  ->  3/3
+  none worsened. Checked: clean, exclusion-in-notes, missing-or-unclear

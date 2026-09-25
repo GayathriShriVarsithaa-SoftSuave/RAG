@@ -48,7 +48,10 @@ TOOL_SPECS = [
         "name": "search_policy",
         "description": ("Look up policy EXCLUSIONS by keyword. Give a short phrase (e.g. 'flood' or "
                         "'vacant house'); returns the matching exclusion ids and wording, or an empty "
-                        "list if none match. It never reads claims and never calculates money."),
+                        "list if none match. It never reads claims and never calculates money. "
+                        "Call this AT MOST ONCE per claim: put every relevant keyword from the notes "
+                        "(the cause of loss AND any other condition, such as vacancy or business use) "
+                        "into ONE query, rather than calling it again to check a different condition."),
         "parameters": {
             "type": "OBJECT",
             "properties": {
