@@ -1,0 +1,532 @@
+[
+  {
+    "claim_id": "CLM-2026-00001",
+    "kind": "clean",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00001"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "pipe burst water damage"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "excess": 500,
+          "claim_status": "COVERED",
+          "loss_amount": 4200
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.0010054999999999999,
+    "answer": {
+      "claim_id": "CLM-2026-00001",
+      "decision": "COVERED",
+      "exclusion_id": null,
+      "payable_amount": 3700.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00002",
+    "kind": "clean",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00002"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "burglary theft"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "loss_amount": 3000,
+          "claim_status": "COVERED",
+          "excess": 250
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.0010054999999999999,
+    "answer": {
+      "claim_id": "CLM-2026-00002",
+      "decision": "COVERED",
+      "exclusion_id": null,
+      "payable_amount": 2750.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00003",
+    "kind": "clean",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00003"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "fire"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "excess": 1000,
+          "claim_status": "COVERED",
+          "loss_amount": 12000
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.0010054999999999999,
+    "answer": {
+      "claim_id": "CLM-2026-00003",
+      "decision": "COVERED",
+      "exclusion_id": null,
+      "payable_amount": 11000.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00004",
+    "kind": "exclusion-in-notes",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00004"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "flood"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "loss_amount": 8500,
+          "excess": 500,
+          "claim_status": "EXCLUDED"
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.001022,
+    "answer": {
+      "claim_id": "CLM-2026-00004",
+      "decision": "EXCLUDED",
+      "exclusion_id": "EXC-01",
+      "payable_amount": 0.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00005",
+    "kind": "exclusion-in-notes",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00005"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "wear and tear gradual damage"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "excess": 500,
+          "claim_status": "EXCLUDED",
+          "loss_amount": 2600
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.0010332499999999999,
+    "answer": {
+      "claim_id": "CLM-2026-00005",
+      "decision": "EXCLUDED",
+      "exclusion_id": "EXC-02",
+      "payable_amount": 0.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00006",
+    "kind": "exclusion-in-notes",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ],
+      [
+        "get_claim",
+        "search_policy",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00006"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "burst pipe unoccupied vacant"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "excess": 500,
+          "loss_amount": 5400,
+          "claim_status": "EXCLUDED"
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.00102775,
+    "answer": {
+      "claim_id": "CLM-2026-00006",
+      "decision": "EXCLUDED",
+      "exclusion_id": "EXC-04",
+      "payable_amount": 0.0
+    },
+    "laps": 4
+  },
+  {
+    "claim_id": "CLM-2026-00007",
+    "kind": "missing-or-unclear",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00007"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 1,
+    "steps_needed": 1,
+    "efficiency": 1.0,
+    "cost": 0.00048150000000000005,
+    "answer": {
+      "claim_id": "CLM-2026-00007",
+      "decision": "NEEDS_INFO",
+      "exclusion_id": null,
+      "payable_amount": 0.0
+    },
+    "laps": 2
+  },
+  {
+    "claim_id": "CLM-2026-00008",
+    "kind": "missing-or-unclear",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00008"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 1,
+    "steps_needed": 1,
+    "efficiency": 1.0,
+    "cost": 0.00047599999999999997,
+    "answer": {
+      "claim_id": "CLM-2026-00008",
+      "decision": "NEEDS_INFO",
+      "exclusion_id": null,
+      "payable_amount": 0.0
+    },
+    "laps": 2
+  },
+  {
+    "claim_id": "CLM-2026-00009",
+    "kind": "missing-or-unclear",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00009"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 1,
+    "steps_needed": 1,
+    "efficiency": 1.0,
+    "cost": 0.0004655,
+    "answer": {
+      "claim_id": "CLM-2026-00009",
+      "decision": "NEEDS_INFO",
+      "exclusion_id": null,
+      "payable_amount": 0.0
+    },
+    "laps": 2
+  },
+  {
+    "claim_id": "CLM-2026-00010",
+    "kind": "exclusion-in-notes",
+    "outcome_pass": true,
+    "trajectory_pass": true,
+    "tool_choice_ok": true,
+    "actual_sequence": [
+      "get_claim",
+      "search_policy",
+      "compute_payout"
+    ],
+    "expected_sequences": [
+      [
+        "get_claim",
+        "search_policy",
+        "compute_payout"
+      ]
+    ],
+    "arg_checks": [
+      {
+        "tool": "get_claim",
+        "args": {
+          "claim_id": "CLM-2026-00010"
+        },
+        "ok": true,
+        "why": "claim_id matches the claim being processed"
+      },
+      {
+        "tool": "search_policy",
+        "args": {
+          "query": "fire business stock"
+        },
+        "ok": true,
+        "why": "non-empty query"
+      },
+      {
+        "tool": "compute_payout",
+        "args": {
+          "claim_status": "EXCLUDED",
+          "excess": 500,
+          "loss_amount": 6200
+        },
+        "ok": true,
+        "why": "loss_amount/excess match the real claim record"
+      }
+    ],
+    "exclusion_grounded": true,
+    "steps_taken": 3,
+    "steps_needed": 3,
+    "efficiency": 1.0,
+    "cost": 0.0010222500000000002,
+    "answer": {
+      "claim_id": "CLM-2026-00010",
+      "decision": "EXCLUDED",
+      "exclusion_id": "EXC-05",
+      "payable_amount": 0.0
+    },
+    "laps": 4
+  }
+]
