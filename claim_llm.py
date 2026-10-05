@@ -37,14 +37,19 @@ def cost_of(tokens_in, tokens_out):
 
 def call_llm(contents, config):
     """Returns (response, seconds, tokens_in, tokens_out). Waits and retries if rate-limited."""
-    for _ in range(6):
+    for _ in range(10):
         start = time.perf_counter()
         try:
             response = _client().models.generate_content(model=GEMINI_MODEL, contents=contents, config=config)
         except Exception as exc:  # noqa: BLE001
-            if "429" in str(exc) or "RESOURCE_EXHAUSTED" in str(exc):
+            msg = str(exc)
+            if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
                 print("  (rate limit hit, waiting 30s ...)")
                 time.sleep(30)
+                continue
+            if "503" in msg or "UNAVAILABLE" in msg or "500" in msg or "INTERNAL" in msg:
+                print("  (Gemini server busy/unavailable, waiting 20s and retrying ...)")
+                time.sleep(20)
                 continue
             raise
         seconds = time.perf_counter() - start
@@ -53,7 +58,7 @@ def call_llm(contents, config):
         tokens_out = max((usage.total_token_count or 0) - tokens_in, 0)   # includes thinking tokens
         time.sleep(PAUSE_SECONDS)
         return response, seconds, tokens_in, tokens_out
-    raise RuntimeError("still rate-limited after 6 tries")
+    raise RuntimeError("still failing after 10 tries (rate limit or server unavailable)")
 
 
 def parse_json(text):

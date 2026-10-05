@@ -54,11 +54,12 @@ def run_agent(claim_id, max_iters=MAX_ITERS, max_tokens=MAX_TOKENS, max_cost=MAX
     tokens_in = tokens_out = 0
     seconds = 0.0          # model-call time + tool time
     laps = 0
+    trajectory = []        # one entry per tool call: {"tool": name, "args": {...}}, in order
 
     def result(answer, stopped_by):
         return {"answer": answer, "terminated_by": stopped_by, "laps": laps,
                 "tokens_in": tokens_in, "tokens_out": tokens_out, "tokens": tokens_in + tokens_out,
-                "cost": cost_of(tokens_in, tokens_out), "seconds": seconds}
+                "cost": cost_of(tokens_in, tokens_out), "seconds": seconds, "trajectory": trajectory}
 
     say(f"AGENT start: {claim_id}  budgets: iters={max_iters} tokens={max_tokens} cost=${max_cost} seconds={max_seconds}")
 
@@ -93,6 +94,7 @@ def run_agent(claim_id, max_iters=MAX_ITERS, max_tokens=MAX_TOKENS, max_cost=MAX
         contents.append(content)                               # keep the model's turn exactly as received
         response_parts = []
         for c in calls:
+            trajectory.append({"tool": c.name, "args": dict(c.args or {})})
             start = time.perf_counter()
             tool_result = run_tool(c.name, dict(c.args or {}))
             seconds += time.perf_counter() - start
