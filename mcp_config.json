@@ -1,5 +1,6 @@
 {
   "servers": [
-    {"name": "policy-document-search", "command": "python3", "args": ["mcp_servers/policy_server.py"]}
+    {"name": "policy-document-search", "command": "python3", "args": ["mcp_servers/policy_server.py"]},
+    {"name": "claims-system", "command": "python3", "args": ["mcp_servers/claims_server.py"]}
   ]
 }
