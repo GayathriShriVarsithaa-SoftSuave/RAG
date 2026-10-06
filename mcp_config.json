@@ -1,0 +1,5 @@
+{
+  "servers": [
+    {"name": "policy-document-search", "command": "python3", "args": ["mcp_servers/policy_server.py"]}
+  ]
+}
