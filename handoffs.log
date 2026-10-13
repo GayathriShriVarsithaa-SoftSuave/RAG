@@ -1,0 +1,45 @@
+{"claim_id": "CLM-2026-00001", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 61, "tokens_out": 11, "tokens_total": 72, "cost": 3.175e-05, "latency_s": 4.358710041968152}
+{"claim_id": "CLM-2026-00001", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 260, "tokens_out": 21, "tokens_total": 281, "cost": 9.649999999999999e-05, "latency_s": 4.12478595902212}
+{"claim_id": "CLM-2026-00001", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 295, "tokens_out": 35, "tokens_total": 330, "cost": 0.00012625, "latency_s": 3.378541582962498}
+{"claim_id": "CLM-2026-00001", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 350, "tokens_out": 25, "tokens_total": 375, "cost": 0.000125, "latency_s": 4.239517790963873}
+{"claim_id": "CLM-2026-00001", "handoff": "orchestrator->synthesis", "tokens_in": 154, "tokens_out": 44, "tokens_total": 198, "cost": 0.0001045, "latency_s": 3.293583999853581}
+{"claim_id": "CLM-2026-00002", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 61, "tokens_out": 18, "tokens_total": 79, "cost": 4.225e-05, "latency_s": 4.652944000205025}
+{"claim_id": "CLM-2026-00002", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 267, "tokens_out": 18, "tokens_total": 285, "cost": 9.375e-05, "latency_s": 1.1016273749992251}
+{"claim_id": "CLM-2026-00002", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 299, "tokens_out": 35, "tokens_total": 334, "cost": 0.00012725, "latency_s": 3.1091736669186503}
+{"claim_id": "CLM-2026-00002", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 354, "tokens_out": 25, "tokens_total": 379, "cost": 0.000126, "latency_s": 4.029825625009835}
+{"claim_id": "CLM-2026-00002", "handoff": "orchestrator->synthesis", "tokens_in": 161, "tokens_out": 44, "tokens_total": 205, "cost": 0.00010625000000000001, "latency_s": 2.1798072499223053}
+{"claim_id": "CLM-2026-00003", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 60, "tokens_out": 15, "tokens_total": 75, "cost": 3.7500000000000003e-05, "latency_s": 6.799267625203356}
+{"claim_id": "CLM-2026-00003", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 266, "tokens_out": 17, "tokens_total": 283, "cost": 9.2e-05, "latency_s": 2.808423832990229}
+{"claim_id": "CLM-2026-00003", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 297, "tokens_out": 37, "tokens_total": 334, "cost": 0.00012974999999999998, "latency_s": 7.092588083120063}
+{"claim_id": "CLM-2026-00003", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 355, "tokens_out": 26, "tokens_total": 381, "cost": 0.00012775, "latency_s": 2.6489173751324415}
+{"claim_id": "CLM-2026-00003", "handoff": "orchestrator->synthesis", "tokens_in": 159, "tokens_out": 45, "tokens_total": 204, "cost": 0.00010725, "latency_s": 1.196043208008632}
+{"claim_id": "CLM-2026-00004", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 62, "tokens_out": 11, "tokens_total": 73, "cost": 3.2000000000000005e-05, "latency_s": 3.235790374921635}
+{"claim_id": "CLM-2026-00004", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 260, "tokens_out": 21, "tokens_total": 281, "cost": 9.649999999999999e-05, "latency_s": 4.686741374898702}
+{"claim_id": "CLM-2026-00004", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 334, "tokens_out": 35, "tokens_total": 369, "cost": 0.000136, "latency_s": 2.9398023749236017}
+{"claim_id": "CLM-2026-00004", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 386, "tokens_out": 27, "tokens_total": 413, "cost": 0.000137, "latency_s": 2.743081791792065}
+{"claim_id": "CLM-2026-00004", "handoff": "orchestrator->synthesis", "tokens_in": 156, "tokens_out": 46, "tokens_total": 202, "cost": 0.000108, "latency_s": 4.196154166944325}
+{"claim_id": "CLM-2026-00005", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 63, "tokens_out": 18, "tokens_total": 81, "cost": 4.2749999999999996e-05, "latency_s": 5.637859208974987}
+{"claim_id": "CLM-2026-00005", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 267, "tokens_out": 19, "tokens_total": 286, "cost": 9.525e-05, "latency_s": 5.492235958110541}
+{"claim_id": "CLM-2026-00005", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 344, "tokens_out": 39, "tokens_total": 383, "cost": 0.0001445, "latency_s": 4.919552834006026}
+{"claim_id": "CLM-2026-00005", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 396, "tokens_out": 27, "tokens_total": 423, "cost": 0.00013949999999999998, "latency_s": 4.579639083938673}
+{"claim_id": "CLM-2026-00005", "handoff": "orchestrator->synthesis", "tokens_in": 163, "tokens_out": 46, "tokens_total": 209, "cost": 0.00010975, "latency_s": 4.41698266682215}
+{"claim_id": "CLM-2026-00006", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 59, "tokens_out": 19, "tokens_total": 78, "cost": 4.325e-05, "latency_s": 4.148125374922529}
+{"claim_id": "CLM-2026-00006", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 268, "tokens_out": 19, "tokens_total": 287, "cost": 9.55e-05, "latency_s": 4.8723320830613375}
+{"claim_id": "CLM-2026-00006", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 344, "tokens_out": 35, "tokens_total": 379, "cost": 0.0001385, "latency_s": 2.8599867920856923}
+{"claim_id": "CLM-2026-00006", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 396, "tokens_out": 27, "tokens_total": 423, "cost": 0.00013949999999999998, "latency_s": 2.9379122080281377}
+{"claim_id": "CLM-2026-00006", "handoff": "orchestrator->synthesis", "tokens_in": 164, "tokens_out": 46, "tokens_total": 210, "cost": 0.00010999999999999999, "latency_s": 3.9604363329708576}
+{"claim_id": "CLM-2026-00007", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 52, "tokens_out": 17, "tokens_total": 69, "cost": 3.85e-05, "latency_s": 4.68379691708833}
+{"claim_id": "CLM-2026-00007", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 266, "tokens_out": 24, "tokens_total": 290, "cost": 0.0001025, "latency_s": 3.5737437498755753}
+{"claim_id": "CLM-2026-00007", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 304, "tokens_out": 35, "tokens_total": 339, "cost": 0.0001285, "latency_s": 5.047925458056852}
+{"claim_id": "CLM-2026-00007", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 359, "tokens_out": 25, "tokens_total": 384, "cost": 0.00012725, "latency_s": 5.355341834016144}
+{"claim_id": "CLM-2026-00007", "handoff": "orchestrator->synthesis", "tokens_in": 160, "tokens_out": 43, "tokens_total": 203, "cost": 0.00010449999999999999, "latency_s": 3.3823781250976026}
+{"claim_id": "CLM-2026-00008", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 31, "tokens_out": 12, "tokens_total": 43, "cost": 2.5750000000000002e-05, "latency_s": 3.511970499996096}
+{"claim_id": "CLM-2026-00008", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 260, "tokens_out": 27, "tokens_total": 287, "cost": 0.00010549999999999999, "latency_s": 3.0477011671755463}
+{"claim_id": "CLM-2026-00008", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 301, "tokens_out": 34, "tokens_total": 335, "cost": 0.00012625, "latency_s": 3.4514363340567797}
+{"claim_id": "CLM-2026-00008", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 354, "tokens_out": 24, "tokens_total": 378, "cost": 0.0001245, "latency_s": 4.657525333110243}
+{"claim_id": "CLM-2026-00008", "handoff": "orchestrator->synthesis", "tokens_in": 154, "tokens_out": 43, "tokens_total": 197, "cost": 0.000103, "latency_s": 3.5388619168661535}
+{"claim_id": "CLM-2026-00010", "handoff": "orchestrator->notes_summary_worker", "tokens_in": 55, "tokens_out": 20, "tokens_total": 75, "cost": 4.3750000000000006e-05, "latency_s": 2.0705345422029495}
+{"claim_id": "CLM-2026-00010", "handoff": "orchestrator->exclusions_worker (lap 1)", "tokens_in": 269, "tokens_out": 16, "tokens_total": 285, "cost": 9.125e-05, "latency_s": 3.7547886669635773}
+{"claim_id": "CLM-2026-00010", "handoff": "orchestrator->exclusions_worker (lap 2)", "tokens_in": 299, "tokens_out": 35, "tokens_total": 334, "cost": 0.00012725, "latency_s": 5.0702497500460595}
+{"claim_id": "CLM-2026-00010", "handoff": "orchestrator->exclusions_worker (lap 3)", "tokens_in": 354, "tokens_out": 25, "tokens_total": 379, "cost": 0.000126, "latency_s": 4.134401750052348}
+{"claim_id": "CLM-2026-00010", "handoff": "orchestrator->synthesis", "tokens_in": 163, "tokens_out": 44, "tokens_total": 207, "cost": 0.00010675, "latency_s": 4.7686690420378}
