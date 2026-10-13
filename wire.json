@@ -1,0 +1,120 @@
+[
+  {
+    "direction": "client -> server",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2025-06-18",
+        "capabilities": {},
+        "clientInfo": {
+          "name": "wire-capture-client",
+          "version": "0.1"
+        }
+      }
+    }
+  },
+  {
+    "direction": "server -> client",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "protocolVersion": "2025-06-18",
+        "capabilities": {
+          "experimental": {},
+          "prompts": {
+            "listChanged": false
+          },
+          "resources": {
+            "subscribe": false,
+            "listChanged": false
+          },
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "claims-system",
+          "version": "1.27.0"
+        }
+      }
+    }
+  },
+  {
+    "direction": "client -> server (notification, no response expected)",
+    "raw": {
+      "jsonrpc": "2.0",
+      "method": "notifications/initialized",
+      "params": {}
+    }
+  },
+  {
+    "direction": "client -> server",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {}
+    }
+  },
+  {
+    "direction": "server -> client",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "tools": [
+          {
+            "name": "get_claim",
+            "description": "Fetch ONE claim's status and adjuster notes by its claim number, in the form\n    CLM-YYYY-NNNNN (for example CLM-2026-00004). Returns the claim's status, date of loss,\n    loss amount, excess, and the adjuster's free-text notes. Raises a clear error if the\n    claim number is not found or is not in the right format.\n    ",
+            "inputSchema": {
+              "properties": {
+                "claim_id": {
+                  "title": "Claim Id",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "claim_id"
+              ],
+              "title": "get_claimArguments",
+              "type": "object"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "direction": "client -> server",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "tools/call",
+      "params": {
+        "name": "get_claim",
+        "arguments": {
+          "claim_id": "CLM-2026-00004"
+        }
+      }
+    }
+  },
+  {
+    "direction": "server -> client",
+    "raw": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\n  \"claim_id\": \"CLM-2026-00004\",\n  \"status\": \"OPEN\",\n  \"date_of_loss\": \"2026-05-20\",\n  \"loss_amount\": 8500.0,\n  \"excess\": 500.0,\n  \"notes\": \"The river overflowed after three days of rain. The ground floor was flooded to 30 cm. Carpets, sofa and kitchen units are ruined.\"\n}"
+          }
+        ],
+        "isError": false
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "before": {
+    "tool_error_shown_to_model": "Error executing tool search_policy: bad query",
+    "model_reaction": "I now know that the tool requires a valid search term to function, so I will prompt the user to provide the specific policy number or claimant name. Once I have that information, I will call `search_policy` again using the provided details as the query."
+  },
+  "after": {
+    "tool_error_shown_to_model": "Error executing tool search_policy: search_policy needs a non-empty query describing the cause of loss or property condition (for example 'flood' or 'vacant house') - an empty string was given.",
+    "model_reaction": "I now understand that the tool requires a specific description of the loss to function correctly. I will re-examine the claim documentation to identify the cause of loss and then call `search_policy` again using that specific term (e.g., \"water damage\" or \"fire\")."
+  }
+}
