@@ -1,11 +1,18 @@
-The decision rule is whether the path varies by input. Across all 10 claims, mine does not:
-get claim -> read notes -> search policy (only if a cause is named) -> decide -> compute payout is
-the same four-or-five-step shape every time, including the 4 claims where step 3's query depends on
-what step 2 found in the notes. No claim needed branching logic an agent's freedom would justify.
+# Verdict: kill
 
-The workflow matched the agent's 100% pass rate while using about half the latency (6.0s vs 12.8s
-p50), a tenth of the tokens (2,618 vs 27,853), and an eighth of the cost ($0.0001 vs $0.0008 per
-claim), because it skips the extra model call the agent spends deciding which tool to call next.
+Citing: pass rate (100% single vs 80% multi - 2 real wrong coverage decisions) and p99 latency
+(20.6s single vs 25.1s multi). The multi-agent system is also cheaper per claim ($0.00045 vs
+$0.00085) and uses fewer total tokens (0.4x multiplier) than the single agent, so cost is NOT
+the problem here - accuracy and latency are.
 
-No claim in this set needs an agent. If a future claim required an open-ended number of lookups
-(e.g. chasing a chain of related prior claims), that would justify one.
+Both real failures traced to the same hand-off: orchestrator->exclusions_worker, which also
+consumes 79% of all multi-agent tokens. Decomposing the task decomposed the context too: the
+summary worker dropped a critical detail (once by hallucinating a response to empty notes,
+once by narrowing a two-part query to one word), and the exclusions worker had no way to
+recover what it was never given.
+
+Sunk-cost bias, named out loud: I built this orchestrator, the architecture is more interesting
+than the single agent, and the token/cost numbers genuinely favor it - all real pulls toward
+keeping it anyway. But a system that gets 1 in 5 real coverage decisions wrong is not a
+production claims tool regardless of how cheap or clever it is, and "it's efficient" is not
+a reason to ship something less accurate than what already worked.
