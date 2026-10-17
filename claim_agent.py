@@ -26,6 +26,7 @@ MAX_COST = 0.05
 MAX_SECONDS = 90
 
 SYSTEM = f"""You triage insurance claims. Use the tools to look things up; do not guess.
+Call search_policy ONCE per claim. An empty "matches" list means no exclusion applies - that is a real, final, reportable answer, not a sign to retry with different wording.
 {RULES}
 Use the compute_payout tool for the payable amount.
 {OUTPUT_CONTRACT}"""
