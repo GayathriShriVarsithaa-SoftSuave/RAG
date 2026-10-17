@@ -1,0 +1,47 @@
+{
+  "trace_id": "f58feb98-07d0-4474-9400-6428457f34df",
+  "timestamp": "2026-10-12T14:47:00",
+  "user": "adjuster.patel",
+  "prompt_version": "v2",
+  "input_type": "claim_triage",
+  "claim_id": "CLM-2026-00011",
+  "input_notes": "The creek behind the property burst its banks after two days of heavy rain and water poured across the ground floor, ruining the flooring and furniture.",
+  "retrieved_context_ids": [],
+  "spans": [
+    {
+      "span": "get_claim",
+      "latency_ms": 456,
+      "tokens_in": 684,
+      "tokens_out": 42,
+      "cost_usd": 0.000234
+    },
+    {
+      "span": "search_policy",
+      "latency_ms": 863,
+      "tokens_in": 524,
+      "tokens_out": 32,
+      "cost_usd": 0.000179
+    },
+    {
+      "span": "compute_payout",
+      "latency_ms": 508,
+      "tokens_in": 526,
+      "tokens_out": 57,
+      "cost_usd": 0.000217
+    },
+    {
+      "span": "generation",
+      "latency_ms": 884,
+      "tokens_in": 825,
+      "tokens_out": 24,
+      "cost_usd": 0.000242
+    }
+  ],
+  "total_tokens": 2714,
+  "total_cost_usd": 0.000872,
+  "total_latency_ms": 2711,
+  "output_decision": "COVERED",
+  "output_exclusion_id": null,
+  "output_payable_amount": 11200.0,
+  "output_text": "Based on the adjuster notes, this claim is covered; the payable amount is $11,200.00."
+}

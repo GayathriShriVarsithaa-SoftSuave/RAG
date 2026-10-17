@@ -1,3 +1,5 @@
+PROMPT_VERSION = "v2"  # v1 -> v2: stop retry-loop on empty search_policy result (Week 11 fix)
+
 """
 Week 7 - ONE shared way to call Gemini. The agent AND the workflow both use it, so they use the
 same model, the same token counting and the same cost formula.

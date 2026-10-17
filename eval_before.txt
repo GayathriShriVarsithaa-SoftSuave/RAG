@@ -1,0 +1,11 @@
+PASS  CLM-2026-00001   expected=COVERED/None  got=COVERED/None  laps=4
+PASS  CLM-2026-00002   expected=COVERED/None  got=COVERED/None  laps=4
+PASS  CLM-2026-00003   expected=COVERED/None  got=COVERED/None  laps=4
+PASS  CLM-2026-00004   expected=EXCLUDED/EXC-01  got=EXCLUDED/EXC-01  laps=4
+PASS  CLM-2026-00005   expected=EXCLUDED/EXC-02  got=EXCLUDED/EXC-02  laps=4
+PASS  CLM-2026-00006   expected=EXCLUDED/EXC-04  got=EXCLUDED/EXC-04  laps=4
+PASS  CLM-2026-00010   expected=EXCLUDED/EXC-05  got=EXCLUDED/EXC-05  laps=4
+PASS  CLM-2026-00011   expected=EXCLUDED/EXC-01  got=EXCLUDED/EXC-01  laps=4
+FAIL  CLM-2026-00012   expected=COVERED/None  got=COVERED/None  laps=7 (max 4)
+
+8/9 passed
