@@ -90,3 +90,14 @@ def grade(answer, claim_id):
                     and answer["exclusion_id"] == exclusion
                     and abs(answer["payable_amount"] - expected_payable(cid, decision)) < 0.01)
     return False
+CLAIMS["CLM-2026-00011"] = {
+    "claim_id": "CLM-2026-00011", "status": "OPEN", "date_of_loss": "2026-10-11",
+    "loss_amount": 11700.0, "excess": 500.0,
+    "notes": "The creek behind the property burst its banks after two days of heavy rain and water poured across the ground floor, ruining the flooring and furniture.",
+}
+
+CLAIMS["CLM-2026-00012"] = {
+    "claim_id": "CLM-2026-00012", "status": "OPEN", "date_of_loss": "2026-10-10",
+    "loss_amount": 9000.0, "excess": 500.0,
+    "notes": "After weeks of heavy rain the ground became saturated and moisture gradually seeped up through the foundation slab into the lounge, damaging the carpet and skirting boards.",
+}

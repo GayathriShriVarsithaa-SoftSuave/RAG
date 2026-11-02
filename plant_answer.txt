@@ -1,0 +1,3 @@
+planted trace_id: f58feb98-07d0-4474-9400-6428457f34df
+claim: CLM-2026-00011
+bug: search_policy keywords miss 'creek'/'burst its banks'
