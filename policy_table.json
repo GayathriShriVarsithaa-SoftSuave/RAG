@@ -1,0 +1,14 @@
+{
+  "products": {
+    "HO3": {"name": "Household", "deductible": 500, "sub_limits": {"water_damage": 15000, "jewellery": 2500}, "policy_limit": 250000},
+    "MO1": {"name": "Motor", "deductible": 750, "sub_limits": {"windscreen": 1500, "personal_effects": 1000}, "policy_limit": 60000}
+  },
+  "policies": {
+    "POL-HO-1001": {"product": "HO3", "in_force_from": "2023-06-01", "in_force_to": "2025-05-31"},
+    "POL-HO-1002": {"product": "HO3", "in_force_from": "2024-01-01", "in_force_to": "2024-06-30"},
+    "POL-HO-1003": {"product": "HO3", "in_force_from": "2025-03-01", "in_force_to": "2026-02-28"},
+    "POL-HO-1004": {"product": "HO3", "in_force_from": "2022-01-01", "in_force_to": "2025-02-28"},
+    "POL-MO-2001": {"product": "MO1", "in_force_from": "2023-09-01", "in_force_to": "2024-08-31"},
+    "POL-MO-2002": {"product": "MO1", "in_force_from": "2024-10-01", "in_force_to": "2025-09-30"}
+  }
+}

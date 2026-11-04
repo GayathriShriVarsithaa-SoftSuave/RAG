@@ -1,0 +1,16 @@
+FORM_NUMBER: MO-0223 ed. 01-23
+POLICY_LINE: MO1
+EFFECTIVE_DATE: 2023-01-01
+TITLE: Motor Policy Wording - Exclusions Schedule (2023 edition)
+
+## Scope
+
+This schedule applies to private motor cover. It lists the causes of loss that are excluded. An adjuster decides whether an exclusion applies to a given loss.
+
+## Exclusions Table
+
+| Code | Description | Applies To (Excluded?) |
+| ---- | ----------- | ---------------------- |
+| EXC-01 | Water damage to the engine caused by driving into standing water or flood water. | Yes - excluded |
+| EXC-02 | Wear and tear: mechanical breakdown or gradual deterioration of parts. | Yes - excluded |
+| EXC-03 | Racing, rallying or any competitive use of the vehicle. | Yes - excluded |

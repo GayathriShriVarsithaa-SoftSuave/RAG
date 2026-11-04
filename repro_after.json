@@ -1,0 +1,173 @@
+{
+  "loss_date": "2024-08-11",
+  "product": "HO3",
+  "edition_in_force": "HO-0123 ed. 01-23",
+  "results": [
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:2",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-02"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:0",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Scope"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:4",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-04"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:4",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-04"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:0",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Scope"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:2",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-02"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:0",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Scope"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:2",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-02"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:0",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Scope"
+      }
+    ],
+    [
+      {
+        "chunk_id": "HO3-2023.txt:structured:1",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-01"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:3",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-03"
+      },
+      {
+        "chunk_id": "HO3-2023.txt:structured:4",
+        "form_number": "HO-0123 ed. 01-23",
+        "edition_date": "2023-01-01",
+        "clause": "Exclusions Table - EXC-04"
+      }
+    ]
+  ],
+  "summary": {
+    "n": 8,
+    "top1_wrong_edition": 0,
+    "any_of_top_k_wrong_edition": 0
+  },
+  "chunks_not_the_edition_in_force": 0
+}
