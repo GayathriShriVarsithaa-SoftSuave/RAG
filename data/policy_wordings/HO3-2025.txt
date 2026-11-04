@@ -1,0 +1,18 @@
+FORM_NUMBER: HO-0125 ed. 03-25
+POLICY_LINE: HO3
+EFFECTIVE_DATE: 2025-03-01
+TITLE: Household Policy Wording - Exclusions Schedule (2025 edition)
+
+## Scope
+
+This schedule applies to household buildings and contents cover. It lists the causes of loss that are excluded. An adjuster decides whether an exclusion applies to a given loss.
+
+## Exclusions Table
+
+| Code | Description | Applies To (Excluded?) |
+| ---- | ----------- | ---------------------- |
+| EXC-01 | Flood: loss or damage caused by flood, meaning the overflow of a river, stream or the sea, surface water run-off after heavy rain, groundwater seepage, storm surge, or rising water from any source. | Yes - excluded |
+| EXC-02 | Wear and tear: gradual deterioration, or old and worn-out materials. | Yes - excluded |
+| EXC-03 | Intentional damage caused deliberately by the policyholder. | Yes - excluded |
+| EXC-04 | Vacant property: loss at a property left unoccupied for more than 60 days. | Yes - excluded |
+| EXC-05 | Business use: business stock or loss arising from business activity at the property. | Yes - excluded |

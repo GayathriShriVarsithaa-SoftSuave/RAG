@@ -1,46 +1,72 @@
 """
-Week 9 - OUR OWN MCP server. Exposes the policy-exclusions search as ONE MCP tool.
+Week 12 MCP server for loss-date-aware policy wording retrieval.
 
-This is "server one" in the task: the policy-document search server the agent already talks
-to. Run standalone to sanity-check it starts cleanly:
-
-    python mcp_servers/policy_server.py
-
-(it will just sit there waiting for a client to connect over stdio - that's normal, Ctrl+C to stop)
+Run with: python mcp_servers/policy_server.py
 """
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # so claims_data.py is importable
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
 from mcp.server.fastmcp import FastMCP
 from mcp.server.fastmcp.exceptions import ToolError
-from claims_data import EXCLUSIONS
+from wording_store import search_wording
 
 mcp = FastMCP("policy-document-search")
 
 
 @mcp.tool()
-def search_policy(query: str) -> dict:
-    """Look up POLICY EXCLUSIONS by keyword, to check whether a described cause of loss or
-    property condition is excluded from cover. Call this ONCE per claim: put every relevant
-    keyword from the adjuster notes into ONE short phrase (for example 'flood', 'vacant house',
-    'wear and tear') rather than calling it again for a second condition. Returns the matching
-    exclusion ids and their wording, or an empty list of matches if nothing in the policy
-    excludes the described cause.
+def search_policy_wording(query: str, product: str, loss_date: str) -> dict:
+    """Search policy wording for one product, resolved against the loss date.
+
+    Returns retrieved chunks with their chunk IDs, clause, form number,
+    edition date and text. This tool reports wording only; it does not
+    make coverage decisions.
     """
-    if not query or not query.strip():
-        raise ToolError(
-            "search_policy needs a non-empty query describing the cause of loss or property "
-            "condition (for example 'flood' or 'vacant house') - an empty string was given."
+    query = (query or "").strip()
+    product = (product or "").strip().upper()
+    loss_date = (loss_date or "").strip()
+
+    if not query:
+        raise ToolError("query must be a non-empty description of the loss")
+    if not product:
+        raise ToolError("product is required (for example HO3 or MO1)")
+    if not loss_date:
+        raise ToolError("loss_date is required in YYYY-MM-DD format")
+
+    try:
+        hits = search_wording(
+            query,
+            product=product,
+            loss_date=loss_date,
+            top_k=5,
         )
-    q = query.lower()
-    matches = []
-    for exc in EXCLUSIONS:
-        if any(word in q for word in exc["keywords"]):
-            matches.append({"id": exc["id"], "title": exc["title"], "wording": exc["wording"]})
-    return {"matches": matches}
+    except ValueError as exc:
+        raise ToolError(str(exc)) from exc
+
+    chunks = []
+
+    for hit in hits:
+        chunk = hit.get("payload", hit)
+
+        chunks.append({
+            "chunk_id": chunk["chunk_id"],
+            "policy_line": chunk["policy_line"],
+            "form_number": chunk["form_number"],
+            "edition_date": chunk["edition_date"],
+            "clause": chunk["clause"],
+            "text": chunk["text"],
+            "score": hit.get("score"),
+        })
+
+    return {
+        "product": product,
+        "loss_date": loss_date,
+        "results": chunks,
+        "result_count": len(chunks),
+    }
 
 
 if __name__ == "__main__":
